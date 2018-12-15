@@ -30,7 +30,7 @@ pplx::task<http_response> make_task_request(http_client & client,
 	json::value const & jvalue);
 int _tmain(int argc, _TCHAR* argv[])
 {
-	http_client client(U("http://yourUrlAddress/WebService.php"));
+	http_client client(U("http://urlOfServer/WebService.php"));
 	wcout << L"\npost values (POST)\n";
 	///hash keys and values for json object here
 	std::vector<std::pair<utility::string_t, json::value>> putvalue;
