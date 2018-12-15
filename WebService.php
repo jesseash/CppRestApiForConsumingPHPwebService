@@ -5,7 +5,7 @@ header("Content-Type:application/json");
 header("HTTP/1.1 ",200);
 
 $inputJSON = file_get_contents('php://input'); //captures the Json object
-$input = json_decode($inputJSON, TRUE); //convert JSON into array
+$input = json_decode($inputJSON, TRUE); //get hashmap from JSON object
 //extract hash values here
 $response['data']=$input["name"]." was here..."; ///concatinates a string verifying the service succesfully executed
 
