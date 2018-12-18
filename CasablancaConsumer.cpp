@@ -62,8 +62,8 @@ pplx::task<http_response> make_task_request(http_client & client,
 	json::value const & jvalue)
 {
 	return (mtd == methods::GET || mtd == methods::HEAD) ?
-		client.request(mtd, L"/restdemo") :
-		client.request(mtd, L"/restdemo", jvalue);
+		client.request(mtd, L"") :
+		client.request(mtd, L"", jvalue);
 }
 
 void make_request(http_client & client, method mtd, json::value const & jvalue)
